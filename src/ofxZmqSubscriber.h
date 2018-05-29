@@ -9,19 +9,21 @@ public:
 	
 	ofxZmqSubscriber();
 	
-	void connect(string addr);
-	void setFilter(string filter);
-	void disconnect(string addr);
+    void bind(std::string addr);
+    void unbind(std::string addr);
+	void connect(std::string addr);
+	void setFilter(std::string filter);
+	void disconnect(std::string addr);
 
-	bool receive(string &data);
+	bool receive(std::string &data);
 	bool receive(ofBuffer &data);
 	
 	bool hasWaitingMessage(long timeout_millis = 0);
-	bool getNextMessage(string &data);
+	bool getNextMessage(std::string &data);
 	bool getNextMessage(ofBuffer &data);
 
 private:
 	
-	string filter;
+	std::string filter;
 	
 };

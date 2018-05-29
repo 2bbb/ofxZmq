@@ -9,12 +9,14 @@ public:
 	
 	ofxZmqPublisher();
 	
-	void bind(string addr);
-	void unbind(string addr);
+    void connect(std::string addr);
+    void disconnect(std::string addr);
+	void bind(std::string addr);
+	void unbind(std::string addr);
 	
-	bool send(const void *data, size_t len, bool nonblocking = false, bool more = false);
-	bool send(void *data, size_t len, bool nonblocking = false, bool more = false);
-	bool send(const string& data, bool nonblocking = false, bool more = false);
+	bool send(const void *data, std::size_t len, bool nonblocking = false, bool more = false);
+	bool send(void *data, std::size_t len, bool nonblocking = false, bool more = false);
+	bool send(const std::string& data, bool nonblocking = false, bool more = false);
 	bool send(const ofBuffer& data, bool nonblocking = false, bool more = false);
 	
 };

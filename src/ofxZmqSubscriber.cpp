@@ -4,6 +4,16 @@ ofxZmqSubscriber::ofxZmqSubscriber() : ofxZmqSocket(ZMQ_SUB)
 {
 }
 
+void ofxZmqSubscriber::bind(string addr)
+{
+    ofxZmqSocket::bind(addr);
+}
+
+void ofxZmqSubscriber::unbind(string addr)
+{
+    ofxZmqSocket::unbind(addr);
+}
+
 void ofxZmqSubscriber::connect(string addr)
 {
 	setFilter(filter);

@@ -81,7 +81,7 @@ bool ofxZmqSocket::send(const string &data, bool nonblocking, bool more)
 
 bool ofxZmqSocket::send(const ofBuffer &data, bool nonblocking, bool more)
 {
-	return ofxZmqSocket::send((const void*)data.getBinaryBuffer(), data.size(), nonblocking, more);
+	return ofxZmqSocket::send((const void*)data.getData(), data.size(), nonblocking, more);
 }
 
 

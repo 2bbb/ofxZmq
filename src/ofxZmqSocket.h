@@ -11,8 +11,8 @@ public:
 
 	virtual ~ofxZmqSocket();
 
-	void setIdentity(string data);
-	string getIdentity();
+    void setIdentity(std::string data);
+	std::string getIdentity();
 
 	bool isConnected();
 
@@ -31,23 +31,23 @@ protected:
 
 	ofxZmqSocket(int type);
 
-	void connect(string addr);
-	void bind(string addr);
-	void disconnect(string addr);
-	void unbind(string addr);
+	void connect(std::string addr);
+	void bind(std::string addr);
+	void disconnect(std::string addr);
+	void unbind(std::string addr);
 
-	bool send(const void *data, size_t len, bool nonblocking, bool more);
-	bool send(void *data, size_t len, bool nonblocking, bool more);
-	bool send(const string &data, bool nonblocking, bool more);
+	bool send(const void *data, std::size_t len, bool nonblocking, bool more);
+	bool send(void *data, std::size_t len, bool nonblocking, bool more);
+	bool send(const std::string &data, bool nonblocking, bool more);
 	bool send(const ofBuffer &data, bool nonblocking, bool more);
 	
-	bool receive(string &data);
+	bool receive(std::string &data);
 	bool receive(ofBuffer &data);
 
 	bool hasWaitingMessage(long timeout_millis = 0);
 	
 	// return true if has more flag
-	bool getNextMessage(string &data);
+	bool getNextMessage(std::string &data);
 	bool getNextMessage(ofBuffer &data);
 
 };
