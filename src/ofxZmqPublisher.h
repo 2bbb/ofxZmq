@@ -9,8 +9,6 @@ public:
 	
 	ofxZmqPublisher();
 	
-    void connect(std::string addr);
-    void disconnect(std::string addr);
 	void bind(std::string addr);
 	void unbind(std::string addr);
 	

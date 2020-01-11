@@ -9,8 +9,6 @@ public:
 	
 	ofxZmqSubscriber();
 	
-    void bind(std::string addr);
-    void unbind(std::string addr);
 	void connect(std::string addr);
 	void setFilter(std::string filter);
 	void disconnect(std::string addr);

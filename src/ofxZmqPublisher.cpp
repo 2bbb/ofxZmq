@@ -4,16 +4,6 @@ ofxZmqPublisher::ofxZmqPublisher() : ofxZmqSocket(ZMQ_PUB)
 {
 }
 
-void ofxZmqPublisher::connect(string addr)
-{
-    ofxZmqSocket::connect(addr);
-}
-
-void ofxZmqPublisher::disconnect(string addr)
-{
-    ofxZmqSocket::disconnect(addr);
-}
-
 void ofxZmqPublisher::bind(string addr)
 {
     ofxZmqSocket::setHighWaterMark(100);
